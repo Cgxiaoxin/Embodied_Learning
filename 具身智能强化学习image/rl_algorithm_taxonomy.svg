@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100%" viewBox="0 0 800 560" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>强化学习算法分类（具身智能视角）</title>
+  <desc>按 Model-Free / Model-Based 维度梳理 PPO、SAC、GRPO、Dreamer 等算法</desc>
+<text x="400.0" y="32" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="17" font-weight="600" fill="#0b0b0b">强化学习算法分类（具身智能视角）</text>
+  <g>
+<rect x="335.0" y="48" width="130" height="40" rx="8" fill="#f5f5f4" stroke="#52514e" stroke-width="0.5"/>
+<text x="400.0" y="68" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="14" font-weight="500" fill="#0b0b0b">强化学习 RL</text>
+  </g>
+  <line x1="400.0" y1="88" x2="400.0" y2="104" stroke="#52514e" stroke-width="1.2"/>
+  <line x1="250.0" y1="104" x2="595.0" y2="104" stroke="#52514e" stroke-width="1.2"/>
+  <line x1="250.0" y1="104" x2="250.0" y2="118" stroke="#52514e" stroke-width="1.2"/>
+  <line x1="595.0" y1="104" x2="595.0" y2="118" stroke="#52514e" stroke-width="1.2"/>
+  <g>
+<rect x="175.0" y="118" width="150" height="40" rx="8" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/>
+<text x="250.0" y="138" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="13" font-weight="500" fill="#0c447c">Model-Free</text>
+  </g>
+  <g>
+<rect x="520.0" y="118" width="150" height="40" rx="8" fill="#fff3e6" stroke="#c45a00" stroke-width="0.5"/>
+<text x="595.0" y="138" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="13" font-weight="500" fill="#8a3d00">Model-Based</text>
+  </g>
+  <line x1="250.0" y1="158" x2="250.0" y2="176" stroke="#185fa5" stroke-width="1"/>
+  <line x1="100.0" y1="176" x2="400.0" y2="176" stroke="#185fa5" stroke-width="1"/>
+  <line x1="100.0" y1="176" x2="100.0" y2="192" stroke="#185fa5" stroke-width="1"/>
+  <line x1="250.0" y1="176" x2="250.0" y2="192" stroke="#185fa5" stroke-width="1"/>
+  <line x1="400.0" y1="176" x2="400.0" y2="192" stroke="#185fa5" stroke-width="1"/>
+  <g>
+<rect x="40" y="192" width="120" height="36" rx="6" fill="#eef7ff" stroke="#2a78d6" stroke-width="0.5"/>
+<text x="100.0" y="210.0" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#185fa5">On-Policy</text>
+  </g>
+  <g>
+<rect x="190" y="192" width="120" height="36" rx="6" fill="#eef7ff" stroke="#2a78d6" stroke-width="0.5"/>
+<text x="250.0" y="210.0" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#185fa5">Off-Policy</text>
+  </g>
+  <g>
+<rect x="340" y="192" width="120" height="36" rx="6" fill="#eeeefd" stroke="#534ab7" stroke-width="0.5"/>
+<text x="400.0" y="210.0" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#534ab7">VLA 后训练</text>
+  </g>
+  <line x1="100.0" y1="228" x2="100.0" y2="278" stroke="#2a78d6" stroke-width="1"/>
+  <line x1="250.0" y1="228" x2="250.0" y2="278" stroke="#2a78d6" stroke-width="1"/>
+  <line x1="400.0" y1="228" x2="400.0" y2="278" stroke="#2a78d6" stroke-width="1"/>
+  <g>
+<rect x="40" y="278" width="120" height="70" rx="8" fill="#e6f1fb" stroke="#2a78d6" stroke-width="0.5"/>
+  <text x="100.0" y="302" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="14" font-weight="600" fill="#0c447c">PPO</text>
+  <text x="100.0" y="322" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="11" font-weight="400" fill="#2a78d6">步态 / WBC</text>
+  <text x="100.0" y="338" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="11" font-weight="400" fill="#2a78d6">策略微调</text>
+  </g>
+  <g>
+<rect x="190" y="278" width="120" height="70" rx="8" fill="#e6f1fb" stroke="#2a78d6" stroke-width="0.5"/>
+  <text x="250.0" y="302" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="14" font-weight="600" fill="#0c447c">SAC</text>
+  <text x="250.0" y="322" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="11" font-weight="400" fill="#2a78d6">灵巧手操作</text>
+  <text x="250.0" y="338" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="11" font-weight="400" fill="#2a78d6">连续控制</text>
+  </g>
+  <g>
+<rect x="340" y="278" width="120" height="70" rx="8" fill="#eeeefd" stroke="#534ab7" stroke-width="0.5"/>
+  <text x="400.0" y="302" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="14" font-weight="600" fill="#3c3489">GRPO</text>
+  <text x="400.0" y="322" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="11" font-weight="400" fill="#534ab7">无 Critic 网络</text>
+  <text x="400.0" y="338" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="11" font-weight="400" fill="#534ab7">组内相对优势</text>
+  </g>
+  <line x1="595.0" y1="158" x2="595.0" y2="278" stroke="#c45a00" stroke-width="1"/>
+  <g>
+<rect x="530" y="278" width="130" height="70" rx="8" fill="#fff3e6" stroke="#c45a00" stroke-width="0.5"/>
+  <text x="595.0" y="302" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="14" font-weight="600" fill="#8a3d00">Dreamer V3</text>
+  <text x="595.0" y="322" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="11" font-weight="400" fill="#c45a00">世界模型</text>
+  <text x="595.0" y="338" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="11" font-weight="400" fill="#c45a00">想象规划</text>
+  </g>
+  <line x1="460" y1="118" x2="460" y2="358" stroke="#e0e0de" stroke-width="1" stroke-dasharray="6 4"/>
+  <g>
+<rect x="20" y="390" width="760" height="150" rx="10" fill="#f5f5f4" stroke="#52514e" stroke-width="0.5"/>
+<text x="400.0" y="418" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#0b0b0b">具身智能典型应用</text>
+  <g>
+<rect x="55" y="435" width="155" height="50" rx="6" fill="#e6f1fb" stroke="#2a78d6" stroke-width="0.5"/>
+<text x="132.5" y="454" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#0c447c">PPO</text>
+<text x="132.5" y="472" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="10" font-weight="400" fill="#52514e">人形步态 / 全身控制</text>
+  </g>
+  <g>
+<rect x="220" y="435" width="155" height="50" rx="6" fill="#e6f1fb" stroke="#2a78d6" stroke-width="0.5"/>
+<text x="297.5" y="454" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#0c447c">SAC</text>
+<text x="297.5" y="472" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="10" font-weight="400" fill="#52514e">机械臂精细操作</text>
+  </g>
+  <g>
+<rect x="385" y="435" width="155" height="50" rx="6" fill="#eeeefd" stroke="#534ab7" stroke-width="0.5"/>
+<text x="462.5" y="454" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#3c3489">GRPO</text>
+<text x="462.5" y="472" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="10" font-weight="400" fill="#52514e">VLA 推理增强</text>
+  </g>
+  <g>
+<rect x="550" y="435" width="155" height="50" rx="6" fill="#fff3e6" stroke="#c45a00" stroke-width="0.5"/>
+<text x="627.5" y="454" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#8a3d00">Dreamer</text>
+<text x="627.5" y="472" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="10" font-weight="400" fill="#52514e">高样本效率</text>
+  </g>
+<text x="400.0" y="512" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, sans-serif" font-size="11" font-weight="400" fill="#52514e">On-Policy 在线更新 · Off-Policy 经验回放 · Model-Based 学习环境动力学</text>
+  </g>
+</svg>
