@@ -1,6 +1,9 @@
 # 具身智能：VLA 与强化学习深度学习
 
-> 本文是 VLA 与强化学习的进阶资料，承接 RT-2 → OpenVLA → π0 → π0.5 主线，系统梳理 VLA 架构演进、四条技术路线深入拆解、RL 算法基础，以及 VLA + RL 后训练范式。
+> **类型**：理论 · **层级**：L1 · **状态**：稳定 · **更新**：2026-07-03  
+> **关联**：[01-VLA算法入门](./01-VLA算法入门.md) · [π0.5 项目实践](../projects/π0.5双臂L6折纸VLA与SAC微调项目实践.md)
+
+> 本文是 VLA 与强化学习的**进阶资料**，承接 [01-VLA算法入门](./01-VLA算法入门.md) 中的基础概念，沿 RT-2 → OpenVLA → π0 → π0.5 主线展开，系统梳理架构演进、四条技术路线、RL 算法基础，以及 VLA + RL 后训练范式。
 
 ---
 
@@ -22,13 +25,13 @@
 
 VLA（Vision-Language-Action）是将**视觉感知（Vision）**、**语言理解（Language）**和**动作执行（Action）**三者融合的端到端模型架构。它让机器人能够理解自然语言指令、感知环境，并输出物理控制信号。
 
-![VLA 总体架构](具身智能强化学习image/vla_architecture_overview.svg)
+![VLA 总体架构](../assets/vla_architecture_overview.svg)
 
 **数据流**：多模态输入（图像/视频、语言指令、本体感知）→ 视觉/语言编码 → 多模态融合 → 动作解码 → 关节角/末端位姿等控制信号。
 
 ### 1.2 模型演进谱系
 
-![VLA 模型演进时间线](具身智能强化学习image/vla_model_timeline.svg)
+![VLA 模型演进时间线](../assets/vla_model_timeline.svg)
 
 | 模型 | 年份 | 核心特点 |
 |------|------|----------|
@@ -82,7 +85,7 @@ RDT-1B 的贡献在于同时解决了这两个问题。
 
 #### 架构：Diffusion + DiT 骨干
 
-![RDT-1B 架构](具身智能强化学习image/rdt1b_architecture.svg)
+![RDT-1B 架构](../assets/rdt1b_architecture.svg)
 
 **统一动作空间**是 RDT-1B 最核心的创新。不同机器人的原始动作向量（关节角、末端位姿、底盘速度等）被统一映射到一个**物理可解释的通用向量**里，包含末端执行器的位置/速度、关节角/角速度、以及轮式运动分量。不同机器人只需填充自己有的分量，多余的分量置零——这样就可以在同一个模型里混合训练几十个不同平台的数据，而不会发生负迁移。
 
@@ -102,7 +105,7 @@ RDT 接收语言指令、最多三个视角的 RGB 图像、控制频率（如�
 
 GR00T N1 是一个 VLA 模型，采用双系统架构：视觉语言模块（**系统 2**）通过视觉和语言指令理解环境，随后的扩散 Transformer 模块（**系统 1**）实时生成流畅的电机动作。两个模块紧密耦合，联合端到端训练。
 
-![GR00T N1 双系统架构](具身智能强化学习image/groot_n1_dual_system.svg)
+![GR00T N1 双系统架构](../assets/groot_n1_dual_system.svg)
 
 灵感来源于人类认知原理：
 
@@ -176,7 +179,7 @@ GR00T N1.6 使用了 NVIDIA 内部的 **Cosmos-2B VLM** 变体作为视觉语言
 
 ACoT-VLA 提出**动作思维链（ACoT）**范式：推理过程本身是一系列**结构化的粗粒度动作意图**（例如「先移动到杯子上方 → 下降抓取 → 平移到目标上方 → 松手放置」），用来引导最终精细动作输出。
 
-![ACoT-VLA 架构](具身智能强化学习image/acot_vla_architecture.svg)
+![ACoT-VLA 架构](../assets/acot_vla_architecture.svg)
 
 #### 三种 CoT 范式对比（路线选型，非同时执行）
 
@@ -232,7 +235,7 @@ ACoT-VLA 提出**动作思维链（ACoT）**范式：推理过程本身是一系
 
 强化学习的核心是智能体（Agent）通过与环境交互，最大化累积奖励。
 
-![RL 算法分类](具身智能强化学习image/rl_algorithm_taxonomy.svg)
+![RL 算法分类](../assets/rl_algorithm_taxonomy.svg)
 
 ### 3.1 核心 RL 算法详解
 
@@ -313,7 +316,7 @@ $$J = \mathbb{E}_{(s,a)\sim D} \left[ r(s, a) + \alpha \mathcal{H}(\pi(\cdot|s))
 
 ## 四、VLA + RL 结合：后训练范式
 
-![VLA + RL 后训练流程](具身智能强化学习image/vla_rl_post_training.svg)
+![VLA + RL 后训练流程](../assets/vla_rl_post_training.svg)
 
 ### 4.1 四阶段流程
 
