@@ -7,6 +7,17 @@
 
 ---
 
+## 目录
+
+1. [能量法直觉：\(L = T - V\)](#一能量法直觉l-t-v)
+2. [欧拉-拉格朗日方程](#二欧拉-拉格朗日方程)
+3. [如何整理成 \(M(q)\ddot q + C(q,\dot q)\dot q + G(q) = \tau\)](#三如何整理成-mqddot-q-cqdot-qdot-q-gq-tau)
+4. [与牛顿-欧拉对照表](#四与牛顿-欧拉对照表)
+5. [适合参数辨识与控制器推导的原因](#五适合参数辨识与控制器推导的原因)
+6. [小结](#小结)
+
+---
+
 ## 一、能量法直觉：\(L = T - V\)
 
 对 \(n\) 自由度机械臂，选关节角 \(q\) 为广义坐标（与 [01 运动学回顾](./01_kinematics_review.md) 一致）。系统动能、势能分别为：
@@ -37,7 +48,7 @@ L(q,\dot q) = T(q,\dot q) - V(q)
 - \frac{\partial L}{\partial q_j} = \tau_j + \tau_{ext,j}
 \]
 
-其中 \(\tau_j\) 为关节驱动力矩，\(\tau_{ext,j}\) 为外力/接触力等效到关节的项（见 04 篇）。代入 \(L=T-V\) 并注意 \(T\) 不含 \(q_j\) 的显式偏导时 \(\partial T/\partial \dot q_j\) 给出广义动量：
+其中 \(\tau_j\) 为关节驱动力矩，\(\tau_{ext,j}\) 为外力/接触力等效到关节的项（见 04 篇）。代入 \(L=T-V\)：因 \(V(q)\) 不含 \(\dot q\)，有 \(\partial L/\partial\dot q_j=\partial T/\partial\dot q_j\)（广义动量）；而 \(T(q,\dot q)\) 经连杆速度/角速度雅可比仍依赖 \(q\)，\(\partial T/\partial q_j\) 不可忽略，与 \(\partial V/\partial q_j\) 一并进入方程：
 
 \[
 \frac{d}{dt}\frac{\partial T}{\partial \dot q_j}
@@ -53,7 +64,7 @@ L(q,\dot q) = T(q,\dot q) - V(q)
 
 ## 三、如何整理成 \(M(q)\ddot q + C(q,\dot q)\dot q + G(q) = \tau\)
 
-由 \(T=\frac{1}{2}\dot q^\top M(q)\dot q\) 定义**质量矩阵** \(M(q)\)（对称正定，对树形臂满秩）。对欧拉-拉格朗日方程做标准整理，可得**标准操作空间形式**：
+由 \(T=\frac{1}{2}\dot q^\top M(q)\dot q\) 定义**质量矩阵** \(M(q)\)（对称正定，对树形臂满秩）。对欧拉-拉格朗日方程做标准整理，可得**标准关节空间形式**：
 
 \[
 M(q)\,\ddot q + C(q,\dot q)\,\dot q + G(q) = \tau + \tau_{ext}
