@@ -1,7 +1,7 @@
 # 任务空间动力学：操作空间惯量 \(\Lambda(x)\)
 
 > **类型**：理论 · **层级**：L1 · **状态**：草稿 · **更新**：2026-09-11  
-> **关联**：[01 运动学回顾](./01_kinematics_review.md) · [04 方程性质](./04_dynamics_equation_properties.md) · [动力学索引](./00_index.md) · [07 基于动力学的控制](./07_dynamics_based_control.md)
+> **关联**：[01 运动学回顾](./01_kinematics_review.md) · [04 方程性质](./04_dynamics_equation_properties.md) · [05 参数辨识](./05_parameter_identification.md) · [动力学索引](./00_index.md) · [07 基于动力学的控制](./07_dynamics_based_control.md)
 
 > 关节空间方程 \(M\ddot q + C\dot q + G = \tau + \tau_{ext}\) 是建模的自然坐标；但力控、阻抗与 VLA 末端动作往往在**笛卡尔任务空间**指定力、加速度或柔顺性。本篇用 [01 篇](./01_kinematics_review.md) 的雅可比 \(J\) 把关节动力学映到任务空间，并给出操作空间惯量 \(\Lambda(x) = (J M^{-1} J^\top)^{-1}\) 的定义与直觉——这是 [07 篇](./07_dynamics_based_control.md) 阻抗/操作空间控制的直接输入。
 
