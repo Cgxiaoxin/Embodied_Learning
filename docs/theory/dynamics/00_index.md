@@ -35,17 +35,17 @@ VLA 模型擅长从视觉-语言预测动作，但真机部署时，**接触、�
 
 ## 二、模块地图
 
-| 编号 | 文件 | 主题 | 一句话 |
-|------|------|------|--------|
-| 01 | [01_kinematics_review.md](./01_kinematics_review.md) | 运动学回顾 | 位姿、雅可比、奇异；动力学接口 \(\dot x=J\dot q\)、\(\tau=J^\top F\) |
-| 02 | [02_newton_euler.md](./02_newton_euler.md) | 牛顿-欧拉 | 前向/反向递推，\(O(n)\) 实时动力学 |
-| 03 | [03_lagrangian.md](./03_lagrangian.md) | 拉格朗日 | \(L=T-V\)，能量法建模与对照 |
-| 04 | [04_dynamics_equation_properties.md](./04_dynamics_equation_properties.md) | 方程性质 | \(M,C,G\)、反对称性、\(Y\theta\)、\(\tau_{ext}\) |
-| 05 | [05_parameter_identification.md](./05_parameter_identification.md) | 参数辨识 | 惯性参数、激励轨迹、基参数、最小二乘 |
-| 06 | [06_task_space_dynamics.md](./06_task_space_dynamics.md) | 任务空间动力学 | 操作空间惯量 \(\Lambda(x)\)，关节↔任务映射 |
-| 07 | [07_dynamics_based_control.md](./07_dynamics_based_control.md) | 基于动力学的控制 | 计算力矩、混合控制、阻抗/导纳、自适应/鲁棒 |
-| 08 | [08_contact_dynamics.md](./08_contact_dynamics.md) | 接触动力学 | 点/软接触、摩擦、互补约束、力闭合 |
-| 09 | [09_sim_tools_and_learning.md](./09_sim_tools_and_learning.md) | 仿真与学习 | MuJoCo/Pinocchio/Drake、Sim2Real、WBC、触觉估力 |
+| 编号 | 文件 | 主题 | 一句话 | 状态 |
+|------|------|------|--------|------|
+| 01 | [01_kinematics_review.md](./01_kinematics_review.md) | 运动学回顾 | 位姿、雅可比、奇异；动力学接口 \(\dot x=J\dot q\)、\(\tau=J^\top F\) | 草稿 |
+| 02 | [02_newton_euler.md](./02_newton_euler.md) | 牛顿-欧拉 | 前向/反向递推，\(O(n)\) 实时动力学 | 草稿 |
+| 03 | [03_lagrangian.md](./03_lagrangian.md) | 拉格朗日 | \(L=T-V\)，能量法建模与对照 | 草稿 |
+| 04 | [04_dynamics_equation_properties.md](./04_dynamics_equation_properties.md) | 方程性质 | \(M,C,G\)、反对称性、\(Y\theta\)、\(\tau_{ext}\) | 草稿 |
+| 05 | [05_parameter_identification.md](./05_parameter_identification.md) | 参数辨识 | 惯性参数、激励轨迹、基参数、最小二乘 | 草稿 |
+| 06 | [06_task_space_dynamics.md](./06_task_space_dynamics.md) | 任务空间动力学 | 操作空间惯量 \(\Lambda(x)\)，关节↔任务映射 | 草稿 |
+| 07 | [07_dynamics_based_control.md](./07_dynamics_based_control.md) | 基于动力学的控制 | 计算力矩、混合控制、阻抗/导纳、自适应/鲁棒 | 草稿 |
+| 08 | [08_contact_dynamics.md](./08_contact_dynamics.md) | 接触动力学 | 点/软接触、摩擦、互补约束、力闭合 | 草稿 |
+| 09 | [09_sim_tools_and_learning.md](./09_sim_tools_and_learning.md) | 仿真与学习 | MuJoCo/Pinocchio/Drake、Sim2Real、WBC、触觉估力 | 草稿 |
 
 ---
 
@@ -66,7 +66,7 @@ VLA 模型擅长从视觉-语言预测动作，但真机部署时，**接触、�
 | 3 | [07_dynamics_based_control.md](./07_dynamics_based_control.md) | 计算力矩、阻抗/导纳与力位混合 |
 | 4 | [08_contact_dynamics.md](./08_contact_dynamics.md) | 接触模型与抓取稳定 |
 
-### 力控线（约 5 篇）
+### 力控线（约 4 篇）
 
 **01 → 06 → 07 → 08**
 
@@ -117,10 +117,10 @@ VLA 模型擅长从视觉-语言预测动作，但真机部署时，**接触、�
 ## 小结
 
 - 本系列在 [03](../03-机器人控制与坐标系基础.md) 之上补齐刚体动力学、力控、接触与仿真学习，面向 L1 教材向 B 深度。
-- 模块 **01–09** 分册撰写；本索引提供模块地图与三条路径：**速览**、**力控**、**VTLA**。
+- 模块 **01–09** 已全部成稿（草稿）；本索引提供模块地图与三条路径：**速览**、**力控**、**VTLA**。
 - 不展开公式推导；具体推导与工程含义见各分册正文。
 - 与 VLA/RL 及项目实践通过相对路径互链；视触觉/VTLA 读者优先 **07→08→09**。
-- 后续任务将逐篇填充 01–09 正文，并更新根 README 索引。
+- 仓库级入口见根 [README](../../README.md) 推荐阅读路径与 L1 理论表。
 
 ## 下一篇
 

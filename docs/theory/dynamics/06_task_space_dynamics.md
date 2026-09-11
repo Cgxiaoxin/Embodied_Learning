@@ -83,7 +83,7 @@ M(q)\,\ddot q + C(q,\dot q)\,\dot q + G(q) = \tau
 
 \[
 \boxed{
-\Lambda(q) \triangleq \big( J(q)\, M(q)^{-1}\, J^\top(q) \big)^{-1}
+\Lambda(x) \triangleq \big( J(q)\, M(q)^{-1}\, J^\top(q) \big)^{-1}
 }
 \]
 
